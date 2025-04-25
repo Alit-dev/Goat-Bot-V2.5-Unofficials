@@ -36,3 +36,17 @@ function startProject() {
 }
 
 startProject();
+
+
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Ami Active');
+});
+
+app.listen(port, () => {
+  console.log(`Server active on http://localhost:${port}`);
+});
